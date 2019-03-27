@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calcualtor</title>
+</head>
+<style type="text/css">
+	td{
+		text-align: center;
+	}
+</style>
+<script type="text/javascript">
+	 function cl() 
+         { 
+            document.getElementById("result").value="";
+                      
+         }
+         function display( val)
+         {
+         	document.getElementById("result").value+=val;
+         }
+
+         function solve() 
+         {
+         	let x=document.getElementById("result").value;
+         	let y=eval(x);
+         	console.log(y);
+         	document.getElementById("result").value = y;
+         }
+</script>
+<body>
+<table border="5">
+	<tr>
+		<td colspan="3"><input type="text" id="result"></td>
+		<td><input type="button" id="c" value="c" onclick="cl()"></td>
+	</tr>
+	<tr>
+		<td><input type="button" id="9" value="9" onclick="display('9')"></td>
+		<td><input type="button" id="8" value="8" onclick="display('8')"></td>
+		<td><input type="button" id="7" value="7" onclick="display('7')"></td>
+		<td><input type="button" id="+" value="+" onclick="display('+')"></td>
+	</tr>
+	<tr>
+		<td><input type="button" id="6" value="6" onclick="display(value)"></td>
+		<td><input type="button" id="5" value="5" onclick="display(value)"></td>
+		<td><input type="button" id="4" value="4" onclick="display(value)"></td>
+		<td><input type="button" id="-" value="-" onclick="display(value)"></td>
+	</tr>
+	<tr>
+		<td><input type="button" id="3" value="3" onclick="display(value)" ></td>
+		<td><input type="button" id="2" value="2" onclick="display(value)"></td>
+		<td><input type="button" id="1" value="1" onclick="display(value)"></td>
+		<td><input type="button" id="*" value="*" onclick="display(value)"></td>
+	</tr>
+	<tr>
+		<td><input type="button" id="0" value="0" onclick="display(value)"></td>
+		<td><input type="button" id="." value="." onclick="display(value)"></td>
+	     <td><input type="button" value="=" onclick="solve()"> </td> 
+		<td><input type="button" id="/" value="/" onclick="display(value)"></td>
+	</tr>
+</table>
+</body>
+</html>

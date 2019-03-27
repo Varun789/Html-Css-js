@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment</title>
+	<style type="text/css">
+	input[type=range]:after{
+   		 content: attr(jvalue);
+    	 color: #000;
+   		 position: bottom;
+	}
+	</style>
+</head>
+<body>
+<input type="range" onchange="this.setAttribute('jvalue',this.value);" min="0" max="10" step="1" value="1">
+</body>
+</html>

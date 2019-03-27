@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>form</title>
+	<style type="text/css">
+		div{
+			background-color: ;
+		}
+		.btn{
+border-radius: 25px;	
+}
+
+	</style>
+	<script type="text/javascript">
+		function getDetailes()
+		{
+			let txt_count=0;
+			let btn_count=0;
+			let r_bar_count=0;
+			let num_count=0; 
+			let date_count=0;
+			let time_count=0;
+			let colour_count=0
+			var x=document.getElementsByTagName('input');
+			for (var i = 0; i < x.length; i++)
+			{
+				
+   				 	var val = x[i];
+   				 	console.log(val);
+     				if (val.getAttribute('type') === 'textbox') 
+     				{
+       				 txt_count++;
+     				}
+     				else if (val.getAttribute('type') === 'button') 
+     				{
+       				 btn_count++;
+     				}
+     				else if (val.getAttribute('type') === 'range') 
+     				{
+       				 r_bar_count++;
+     				}
+     				else if (val.getAttribute('type') === 'NUMBER') 
+     				{
+       				 num_count++;
+     				}
+     				else if (val.getAttribute('type') === 'date') 
+     				{
+       				 date_count++;
+     				}
+     				 else if (val.getAttribute('type') === 'colour') 
+     				{
+       				 colour_count++;
+     				}
+ 				 
+			}
+			document.getElementById("demo").innerHTML="Number of textbox:"+txt_count
+			+"<br>Number of button:"+ btn_count
+			+"<br>Number of rangebar:"+ r_bar_count
+			+"<br>Number of phonenumber:"+ num_count 
+			+"<br>Number of datebox:"+ date_count
+			+"<br>Number of timebox:"+ time_count
+			+"<br>Number of colourbox:"+ colour_count;
+		}
+
+
+	</script>
+</head>
+<body>
+	<div  style="background-color:#DCE4E5">
+	<table align="center">
+<form >
+	
+	<tr>
+		<th align="right">TITLE : </th>
+		<td><input type="textbox" name="TITLE" placeholder="select one of enter your own"></td>
+	</tr>
+	<tr>
+		<th align="right"><label>NAME : </label></td>	
+		<td><input type="textbox" name="NAME" placeholder="John Doe" required><br>
+		</td>
+	</tr>
+		<th align="right"><label>PHONE NUMBER : </label></td>
+		<td><input type="NUMBER" name="PHONE" placeholder="+1 23456789" required><br></td>
+	</tr>
+	<tr>
+		<th align="right"><label>E_MAIL ADDRESS : </label></td>	
+		<td><input type="email" name="email" placeholder="add@sdaad" required><br></td>
+	</tr>
+	<tr>
+		<th align="right"><label>YOUR WEBSITE : </label></td>
+		<td><input type="textbox" name="WEBSITE" placeholder="www.yourweb.com"><br></td>
+	</tr>
+	<tr>
+		<th align="right"><label>NUMBER OF ITEMS TO ORDER : </label></td>
+		<td><input type="NUMBER" name="ITEMS" placeholder="0" max="10" min="1"><br></td>
+	</tr>
+	<tr>
+		<th align="right"><label>DELIVERY DATE : </label></td>	
+		<td><input type="date" name="del_time" min="2010-10-16" placeholder="0" max="1" min="10"><br></td>
+	</tr>
+	<tr>
+		<th align="right"><label>LENGTH : </label></td>
+		<td><input type="range" name="LENGTH"><br></td>
+	</tr>
+	<tr>
+		<th align="right"><label>TIME OF DELIVERY : </label></td>
+		<td><input type="time" name="deliverytime"><br></td>
+	</tr>
+	<tr>
+		<th align="right"><label>COLOUR OF THE ITEM : </label></td>
+		<td><input type="colour" name="colourofitem" value="red"><br></td>
+	</tr>
+	<tr>
+	</tr>
+	<tr>	<td align="right"><input type="submit" name="submit_button" id="sub_btn" value="SUBMIT" class="btn"><br></td>
+	</tr>
+</table>
+</div>
+<br>
+
+<div  style="background-color:#DCE4E5">
+<table align="center">
+<div>
+	<br>
+	<tr>
+	
+		<th align="right" style="padding-left: 210px;"><label>SEARCH : </label></td>
+		<td><input type="textbox" name="SEARCH">
+		<input type="button" name="go_btn" value="GO" class="btn">
+	</tr>
+</table>
+</div>
+<br>
+<div  style="background-color:#DCE4E5">
+<table align="center">
+	<br>
+
+	<tr>		
+		<th align="right" style="padding-left: 222px;" ><label><tb>PROGRESS : </label></th>
+		<td><progress value="45" max="100"></progress><br></td>
+	</tr>
+	<tr>
+		<th align="right"><label>DISK USAGE : </label></th>
+		<td><meter min="200" max="500"
+	  		value="350"></meter><meter low="69" high="80" max="100"
+  			value="84">B</meter><meter low="15" high="50" max="80" value="25"></meter> </td>
+	</tr>
+</div>
+</form>
+</table>
+<input type="button" name="getDetailes" value="Detailes"onclick="getDetailes()">
+<div id="demo"></div>
+</body>
+</html>

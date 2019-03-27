@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignmentpr5</title>
+	<script type="text/javascript">
+		function getbytagname() {
+			var x=document.getElementsByTagName("p");
+			x[0].innerHTML="Hello World";
+		}
+
+		function getbyid() {
+			document.getElementById("div1").innerHTML="Hello!";
+		}
+
+		function getbyclass() {
+			 var x = document.getElementsByClassName("example");
+  				x[0].innerHTML = "Hello World!";
+  				x[1].innerHTML="Hello World!";
+		}	
+		
+
+		function getbyname() {
+			var x=document.getElementsByName("f_name");
+			x[0].innerHTML="VARUN";
+		}
+		
+	</script>
+</head>
+<body>
+<div name="f_name">Get By name.</div>
+<p >This is also a paragraph!</p>
+<div id="div1">I am id div1.</div>
+
+<div class="example">First div element with class="example".</div>
+
+<div class="example">Second div element with class="example".</div>
+
+
+
+<input type="button" name="btn1" value="Bytn" onclick="getbytagname()">
+<input type="button" name="btn2" onclick="getbyid();" value="Byid" >
+<input type="button" name="btn3" onclick="getbyclass();" value="Byclass">
+<input type="button" name="btn4" onclick="getbyname();" value="Byname">
+</body>
+</html>

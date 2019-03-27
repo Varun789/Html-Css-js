@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>String_Operations</title>
+</head>
+<style type="text/css">
+	input[type=button]
+	{
+		width: 10;
+	}
+</style>
+<script type="text/javascript">
+	function ShowElementAt() {
+		var str=document.getElementById("Input").value;
+		var val=prompt("Enter the index");
+		  if ((val !="" || !(val>str.lenght()||val<str.lenght())) && str!="") 
+		  {
+    		document.getElementById("Output").innerHTML =
+    		"The element at index "+val+" is "+str.charAt(val);
+ 		  }
+ 		  else
+ 		  {
+ 		  	document.getElementById("Output").innerHTML =
+    		"Some mistake!";
+ 		  }
+    }
+
+    function SliceString()
+    {
+    	var str=document.getElementById("Input").value;
+    	var start_ind=prompt("Enter the starting index :");
+    	var end_ind=prompt("Enter the ending index : ");
+    	if( str != "")
+    	{
+
+    			document.getElementById("Output").innerHTML="The sliced string is:"+str.slice(start_ind,end_ind);
+    	}
+    	else
+    	{
+    		document.getElementById("Output").innerHTML =
+    		"Some mistake!";
+    	}
+    }
+
+	function Clr()
+	{
+		document.getElementById("Input").value="";
+	}
+
+	function Replace()
+	{
+		var str=document.getElementById("Input").value;
+		var word=prompt("Enter the word to be replaced :");
+    	var newword=prompt("Enter the word to be inserted : ");
+    	if( str != "" &&  str.includes(word) )
+    	{
+    		
+    			document.getElementById("Output").innerHTML=str.replace(word,newword);;
+    	}
+    	else
+    	{
+    		document.getElementById("Output").innerHTML =
+    		"Some mistake!";
+    	}
+
+	}
+
+	function Uppercase()
+	{
+		var str=document.getElementById("Input").value;
+		if(str!="")
+		{
+			console.log(str.toUpperCase());
+		}
+	}
+
+	
+</script>
+<body>
+	<input type="textbox" id="Input" ><br>
+	<input type="button" id="ShowElementAtbtn" value="charAt"onclick="ShowElementAt();"><br>
+	<input type="button" id=" SliceStringbtn" value="Slice" onclick="SliceString();"><br>
+	<input type="button" id="Replacebtn" value="Replace"  onclick="Replace();"><br>
+	<input type="button" id="Uppercasebtn"  value="Uppercase" onclick="Uppercase();"><br>
+	<input type="button" id="Clr" value="Clear" onclick="Clr()"><br>
+	<div id="Output"></div>
+</body>
+</html>
